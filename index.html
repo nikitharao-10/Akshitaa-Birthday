@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Happy Birthday Akshitaa ✨</title>
 
 <style>
@@ -21,9 +20,8 @@ body {
     text-align: center;
 }
 
-/* Dreamy stars */
 body::before {
-    content: "✦  ·  ✧    ·  ✦    ·    ✧  ·  ✦";
+    content: "✦ · ✧ · ✦ · ✧ · ✦";
     position: fixed;
     top: 8%;
     left: 5%;
@@ -41,7 +39,6 @@ body::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .screen.active {
@@ -103,7 +100,8 @@ button:hover {
     transform: scale(1.08);
 }
 
-/* Cake */
+/* CAKE */
+
 .cake {
     position: relative;
     width: 220px;
@@ -154,12 +152,12 @@ button:hover {
 }
 
 @keyframes flicker {
-    from { transform: rotate(40deg) scale(1); }
-    to { transform: rotate(50deg) scale(1.12); }
-}
-
-.out {
-    display: none;
+    from {
+        transform: rotate(40deg) scale(1);
+    }
+    to {
+        transform: rotate(50deg) scale(1.12);
+    }
 }
 
 .small {
@@ -167,7 +165,6 @@ button:hover {
     opacity: 0.7;
 }
 
-/* Message */
 .message {
     text-align: left;
     background: rgba(255,255,255,0.08);
@@ -180,7 +177,6 @@ button:hover {
     font-size: 17px;
 }
 
-/* Photos */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -196,7 +192,6 @@ button:hover {
     border: 2px solid rgba(255,255,255,0.3);
 }
 
-/* Floating hearts */
 .heart {
     position: fixed;
     bottom: -30px;
@@ -210,7 +205,11 @@ button:hover {
         transform: translateY(0);
         opacity: 0;
     }
-    20% { opacity: 1; }
+
+    20% {
+        opacity: 1;
+    }
+
     100% {
         transform: translateY(-110vh);
         opacity: 0;
@@ -220,10 +219,6 @@ button:hover {
 .warning {
     font-size: 20px;
     line-height: 1.7;
-}
-
-#noButton {
-    position: relative;
 }
 
 @media(max-width:500px) {
@@ -240,9 +235,7 @@ button:hover {
 
 <body>
 
-<!-- =========================
-     SCREEN 1 - WELCOME
-========================= -->
+<!-- WELCOME -->
 
 <section id="welcome" class="screen active">
 
@@ -260,14 +253,16 @@ button:hover {
             But first, I need to know something 👀
         </p>
 
-        <h2>Are you ready for your birthday surprise? 🎀</h2>
+        <h2>
+            Are you ready for your birthday surprise? 🎀
+        </h2>
 
         <div>
             <button class="yes" onclick="sayYes()">
                 YES 💕
             </button>
 
-            <button class="no" id="noButton" onclick="sayNo()">
+            <button class="no" onclick="sayNo()">
                 NO 🙈
             </button>
         </div>
@@ -277,9 +272,7 @@ button:hover {
 </section>
 
 
-<!-- =========================
-     SCREEN 2 - NO WARNING
-========================= -->
+<!-- WARNING -->
 
 <section id="warning" class="screen">
 
@@ -290,12 +283,18 @@ button:hover {
         <h2>WAIT A MINUTE!</h2>
 
         <p class="warning">
+
             Akshitaa... are you seriously saying
             <b>NO</b> to your own birthday surprise?! 😭😂
+
             <br><br>
+
             Nice try. 😌
+
             <br><br>
+
             You need to reconsider your decision immediately. 💗
+
         </p>
 
         <button class="yes" onclick="goWelcome()">
@@ -307,15 +306,15 @@ button:hover {
 </section>
 
 
-<!-- =========================
-     SCREEN 3 - CANDLE
-========================= -->
+<!-- CANDLE -->
 
 <section id="candleScreen" class="screen">
 
     <div class="card">
 
-        <h2>Make a Wish, Akshitaa 🎂✨</h2>
+        <h2>
+            Make a Wish, Akshitaa 🎂✨
+        </h2>
 
         <p>
             Close your eyes... make a wish... 🥹
@@ -337,30 +336,26 @@ button:hover {
             🕯️ Tap the flame to blow out the candle
         </p>
 
-        <p class="small">
-            (We'll make the real microphone blowing feature later.)
-        </p>
-
     </div>
 
 </section>
 
 
-<!-- =========================
-     SCREEN 4 - BIRTHDAY MESSAGE
-========================= -->
+<!-- MESSAGE -->
 
 <section id="messageScreen" class="screen">
 
     <div class="card">
 
-        <div style="font-size:50px;">🎉💗✨</div>
+        <div style="font-size:50px;">
+            🎉💗✨
+        </div>
 
-        <h2>Happy Birthday, Akshitaa! 🎂</h2>
+        <h2>
+            Happy Birthday, Akshitaa! 🎂
+        </h2>
 
         <div class="message">
-
-            <!-- 💌 EDIT YOUR BIRTHDAY MESSAGE HERE -->
 
             <p>
                 <b>Happiest Birthday Akshitaa ✨</b>
@@ -371,19 +366,19 @@ button:hover {
             </p>
 
             <p>
-                I am really sorry mai tere birthday pe nahi aa saki,
+                I am really sorry mai tere birthday pe nai asaki
                 par iss wajah se humari friendship pe koi asar nahi hona.
                 Hum close the aur humesha rahenge. 🫶🏻
             </p>
 
             <p>
-                I want ki hum humesha saath rahe, chahe kuch bhi ho.
+                I want ki hum humesha saath rahe chahe kuch bhi ho.
                 I just don't want to lose you. 🥹❤️
             </p>
 
             <p>
-                Agar kabhi koi misunderstandings ho bhi gayi,
-                we'll sit and sort it out, but we won't get apart.
+                Agar kabhi koi misunderstandings ho bhi gai,
+                we'll sit and sort it out but we won't get apart.
                 Ye yaad rakhna. 🤞🏻
             </p>
 
@@ -394,7 +389,7 @@ button:hover {
 
             <p>
                 <b>
-                    Once again, happiest birthday, baby girl! 😍❤️✨
+                    Once again, happy birthday baby girl! 😍❤️✨
                 </b>
             </p>
 
@@ -409,17 +404,19 @@ button:hover {
 </section>
 
 
-<!-- =========================
-     SCREEN 5 - PHOTOS
-========================= -->
+<!-- PHOTOS -->
 
 <section id="photosScreen" class="screen">
 
     <div class="card">
 
-        <div style="font-size:50px;">📸💗</div>
+        <div style="font-size:50px;">
+            📸💗
+        </div>
 
-        <h2>Our Little Memories ✨</h2>
+        <h2>
+            Our Little Memories ✨
+        </h2>
 
         <p>
             Some memories with my favourite person 🥹❤️
@@ -427,22 +424,13 @@ button:hover {
 
         <div class="gallery">
 
-            <!--
-            📸 ADD YOUR PHOTOS HERE
+            <img src="photos/photo1.jpg" style="object-fit: contain; width: 100%; height: 300px;">
 
-            Later upload your photos to GitHub inside:
-            photos/
+            <img src="photos/photo2.jpg" style="object-fit: contain; width: 100%; height: 300px;">
 
-            Then change these names to your actual photo names.
+            <img src="photos/photo3.jpg" style="object-fit: contain; width: 100%; height: 300px;">
 
-            Example:
-            <img src="photos/photo1.jpg">
-            -->
-
-            <img src="photos/photo1.jpg" alt="Memory 1">
-            <img src="photos/photo2.jpg" alt="Memory 2">
-            <img src="photos/photo3.jpg" alt="Memory 3">
-            <img src="photos/photo4.jpg" alt="Memory 4">
+            <img src="photos/photo4.jpg" style="object-fit: contain; width: 100%; height: 300px;">
 
         </div>
 
@@ -461,7 +449,6 @@ button:hover {
 
 <script>
 
-/* Change screen */
 function showScreen(id) {
 
     document.querySelectorAll(".screen").forEach(screen => {
@@ -472,16 +459,15 @@ function showScreen(id) {
 }
 
 
-/* YES button */
 function sayYes() {
 
     showScreen("candleScreen");
 
     createHearts();
+
 }
 
 
-/* NO button */
 function sayNo() {
 
     showScreen("warning");
@@ -489,7 +475,6 @@ function sayNo() {
 }
 
 
-/* Try again */
 function goWelcome() {
 
     showScreen("welcome");
@@ -497,7 +482,6 @@ function goWelcome() {
 }
 
 
-/* Blow candle */
 document.getElementById("flame").addEventListener("click", function() {
 
     this.style.display = "none";
@@ -513,7 +497,6 @@ document.getElementById("flame").addEventListener("click", function() {
 });
 
 
-/* Photos */
 function showPhotos() {
 
     showScreen("photosScreen");
@@ -523,7 +506,6 @@ function showPhotos() {
 }
 
 
-/* Floating hearts */
 function createHearts() {
 
     for(let i = 0; i < 12; i++) {
@@ -532,9 +514,12 @@ function createHearts() {
 
         heart.className = "heart";
 
-        heart.innerHTML = ["❤️","💗","💕","✨","🌸"][Math.floor(Math.random()*5)];
+        heart.innerHTML =
+            ["❤️","💗","💕","✨","🌸"]
+            [Math.floor(Math.random()*5)];
 
-        heart.style.left = Math.random() * 100 + "%";
+        heart.style.left =
+            Math.random() * 100 + "%";
 
         heart.style.animationDuration =
             (4 + Math.random() * 4) + "s";
@@ -550,20 +535,23 @@ function createHearts() {
 }
 
 
-/* Confetti */
 function createConfetti() {
 
     for(let i = 0; i < 35; i++) {
 
         let piece = document.createElement("div");
 
-        piece.innerHTML = ["🎉","✨","💗","🌸"][Math.floor(Math.random()*4)];
+        piece.innerHTML =
+            ["🎉","✨","💗","🌸"]
+            [Math.floor(Math.random()*4)];
 
         piece.style.position = "fixed";
 
-        piece.style.left = Math.random() * 100 + "%";
+        piece.style.left =
+            Math.random() * 100 + "%";
 
-        piece.style.top = Math.random() * 80 + "%";
+        piece.style.top =
+            Math.random() * 80 + "%";
 
         piece.style.fontSize = "25px";
 
