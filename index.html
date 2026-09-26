@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Akshitaa ✨</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #17152d, #30204d, #5b376f);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* Dreamy stars */
+body::before {
+    content: "✦  ·  ✧    ·  ✦    ·    ✧  ·  ✦";
+    position: fixed;
+    top: 8%;
+    left: 5%;
+    width: 90%;
+    font-size: 25px;
+    letter-spacing: 25px;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.screen {
+    min-height: 100vh;
+    padding: 45px 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.card {
+    width: min(90%, 650px);
+    padding: 35px 25px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 35px rgba(255,190,240,0.25);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+h1 {
+    font-size: clamp(34px, 8vw, 58px);
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: clamp(27px, 6vw, 42px);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+button {
+    border: none;
+    padding: 14px 28px;
+    margin: 12px;
+    border-radius: 50px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.yes {
+    background: #ff8fc7;
+    color: white;
+    box-shadow: 0 0 20px rgba(255,143,199,0.6);
+}
+
+.no {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Cake */
+.cake {
+    position: relative;
+    width: 220px;
+    height: 130px;
+    margin: 30px auto;
+}
+
+.cake-base {
+    position: absolute;
+    bottom: 0;
+    width: 220px;
+    height: 100px;
+    background: #f5a4c7;
+    border-radius: 15px 15px 25px 25px;
+    box-shadow: 0 10px 0 #d77da7;
+}
+
+.cake-top {
+    position: absolute;
+    top: 20px;
+    width: 220px;
+    height: 45px;
+    background: #ffd4e8;
+    border-radius: 50%;
+}
+
+.candle {
+    position: absolute;
+    left: 100px;
+    top: -45px;
+    width: 20px;
+    height: 70px;
+    background: #fff1a8;
+    border-radius: 5px;
+}
+
+.flame {
+    position: absolute;
+    left: 99px;
+    top: -72px;
+    width: 23px;
+    height: 35px;
+    background: #ffd45c;
+    border-radius: 50% 50% 50% 10%;
+    transform: rotate(45deg);
+    box-shadow: 0 0 25px #ffcc55;
+    animation: flicker 0.6s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: rotate(40deg) scale(1); }
+    to { transform: rotate(50deg) scale(1.12); }
+}
+
+.out {
+    display: none;
+}
+
+.small {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Message */
+.message {
+    text-align: left;
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 22px;
+    margin-top: 20px;
+}
+
+.message p {
+    font-size: 17px;
+}
+
+/* Photos */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    animation: float 6s linear forwards;
+    pointer-events: none;
+    font-size: 22px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+.warning {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+#noButton {
+    position: relative;
+}
+
+@media(max-width:500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 240px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     SCREEN 1 - WELCOME
+========================= -->
+
+<section id="welcome" class="screen active">
+
+    <div class="card">
+
+        <div style="font-size:50px;">🌙✨</div>
+
+        <h1>Hi Akshitaa 💗</h1>
+
+        <p class="subtitle">
+            I made a little something for you...
+        </p>
+
+        <p>
+            But first, I need to know something 👀
+        </p>
+
+        <h2>Are you ready for your birthday surprise? 🎀</h2>
+
+        <div>
+            <button class="yes" onclick="sayYes()">
+                YES 💕
+            </button>
+
+            <button class="no" id="noButton" onclick="sayNo()">
+                NO 🙈
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCREEN 2 - NO WARNING
+========================= -->
+
+<section id="warning" class="screen">
+
+    <div class="card">
+
+        <div style="font-size:55px;">🚨😂</div>
+
+        <h2>WAIT A MINUTE!</h2>
+
+        <p class="warning">
+            Akshitaa... are you seriously saying
+            <b>NO</b> to your own birthday surprise?! 😭😂
+            <br><br>
+            Nice try. 😌
+            <br><br>
+            You need to reconsider your decision immediately. 💗
+        </p>
+
+        <button class="yes" onclick="goWelcome()">
+            Try Again 🔄💗
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCREEN 3 - CANDLE
+========================= -->
+
+<section id="candleScreen" class="screen">
+
+    <div class="card">
+
+        <h2>Make a Wish, Akshitaa 🎂✨</h2>
+
+        <p>
+            Close your eyes... make a wish... 🥹
+        </p>
+
+        <div class="cake">
+
+            <div class="flame" id="flame"></div>
+
+            <div class="candle"></div>
+
+            <div class="cake-top"></div>
+
+            <div class="cake-base"></div>
+
+        </div>
+
+        <p>
+            🕯️ Tap the flame to blow out the candle
+        </p>
+
+        <p class="small">
+            (We'll make the real microphone blowing feature later.)
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCREEN 4 - BIRTHDAY MESSAGE
+========================= -->
+
+<section id="messageScreen" class="screen">
+
+    <div class="card">
+
+        <div style="font-size:50px;">🎉💗✨</div>
+
+        <h2>Happy Birthday, Akshitaa! 🎂</h2>
+
+        <div class="message">
+
+            <!-- 💌 EDIT YOUR BIRTHDAY MESSAGE HERE -->
+
+            <p>
+                <b>Happiest Birthday Akshitaa ✨</b>
+            </p>
+
+            <p>
+                I love you so much and you know that. ❤️
+            </p>
+
+            <p>
+                I am really sorry mai tere birthday pe nahi aa saki,
+                par iss wajah se humari friendship pe koi asar nahi hona.
+                Hum close the aur humesha rahenge. 🫶🏻
+            </p>
+
+            <p>
+                I want ki hum humesha saath rahe, chahe kuch bhi ho.
+                I just don't want to lose you. 🥹❤️
+            </p>
+
+            <p>
+                Agar kabhi koi misunderstandings ho bhi gayi,
+                we'll sit and sort it out, but we won't get apart.
+                Ye yaad rakhna. 🤞🏻
+            </p>
+
+            <p>
+                Aur iss saal zyada overthink mat karna aur khush rehna.
+                Tu jaisi bhi hai, we love you. 🥰
+            </p>
+
+            <p>
+                <b>
+                    Once again, happiest birthday, baby girl! 😍❤️✨
+                </b>
+            </p>
+
+        </div>
+
+        <button class="yes" onclick="showPhotos()">
+            One Last Thing... 📸✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCREEN 5 - PHOTOS
+========================= -->
+
+<section id="photosScreen" class="screen">
+
+    <div class="card">
+
+        <div style="font-size:50px;">📸💗</div>
+
+        <h2>Our Little Memories ✨</h2>
+
+        <p>
+            Some memories with my favourite person 🥹❤️
+        </p>
+
+        <div class="gallery">
+
+            <!--
+            📸 ADD YOUR PHOTOS HERE
+
+            Later upload your photos to GitHub inside:
+            photos/
+
+            Then change these names to your actual photo names.
+
+            Example:
+            <img src="photos/photo1.jpg">
+            -->
+
+            <img src="photos/photo1.jpg" alt="Memory 1">
+            <img src="photos/photo2.jpg" alt="Memory 2">
+            <img src="photos/photo3.jpg" alt="Memory 3">
+            <img src="photos/photo4.jpg" alt="Memory 4">
+
+        </div>
+
+        <h2 style="margin-top:35px;">
+            Here's to many more memories together 🫶🏻✨
+        </h2>
+
+        <p>
+            Happy Birthday, baby girl! 🎂❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* Change screen */
+function showScreen(id) {
+
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+    });
+
+    document.getElementById(id).classList.add("active");
+}
+
+
+/* YES button */
+function sayYes() {
+
+    showScreen("candleScreen");
+
+    createHearts();
+}
+
+
+/* NO button */
+function sayNo() {
+
+    showScreen("warning");
+
+}
+
+
+/* Try again */
+function goWelcome() {
+
+    showScreen("welcome");
+
+}
+
+
+/* Blow candle */
+document.getElementById("flame").addEventListener("click", function() {
+
+    this.style.display = "none";
+
+    createConfetti();
+
+    setTimeout(function() {
+
+        showScreen("messageScreen");
+
+    }, 1200);
+
+});
+
+
+/* Photos */
+function showPhotos() {
+
+    showScreen("photosScreen");
+
+    createHearts();
+
+}
+
+
+/* Floating hearts */
+function createHearts() {
+
+    for(let i = 0; i < 12; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML = ["❤️","💗","💕","✨","🌸"][Math.floor(Math.random()*5)];
+
+        heart.style.left = Math.random() * 100 + "%";
+
+        heart.style.animationDuration =
+            (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
+
+    }
+
+}
+
+
+/* Confetti */
+function createConfetti() {
+
+    for(let i = 0; i < 35; i++) {
+
+        let piece = document.createElement("div");
+
+        piece.innerHTML = ["🎉","✨","💗","🌸"][Math.floor(Math.random()*4)];
+
+        piece.style.position = "fixed";
+
+        piece.style.left = Math.random() * 100 + "%";
+
+        piece.style.top = Math.random() * 80 + "%";
+
+        piece.style.fontSize = "25px";
+
+        piece.style.zIndex = "999";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 1500);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
